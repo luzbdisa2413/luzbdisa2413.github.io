@@ -1,0 +1,180 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#333;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#003366;
+color:white;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.hero{
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+height:500px;
+background:linear-gradient(rgba(0,51,102,.7),rgba(0,51,102,.7)),
+url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85");
+background-size:cover;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.hero form{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.hero input{
+padding:15px;
+width:300px;
+border:none;
+border-radius:5px;
+}
+
+.hero button{
+padding:15px 25px;
+background:#f39c12;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:5px;
+}
+
+.catalogo{
+padding:60px 10%;
+}
+
+.catalogo h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.beneficios{
+padding:60px 10%;
+background:white;
+}
+
+.beneficios h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.beneficios-flex{
+display:flex;
+gap:30px;
+}
+
+.beneficios-flex div{
+flex:1;
+background:#003366;
+color:white;
+padding:30px;
+border-radius:10px;
+}
+
+.registro{
+padding:60px 10%;
+}
+
+.registro h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.registro-form{
+display:flex;
+flex-direction:column;
+max-width:500px;
+margin:auto;
+gap:15px;
+}
+
+.registro-form input{
+padding:15px;
+}
+
+.registro-form button{
+padding:15px;
+background:#003366;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+footer{
+display:flex;
+justify-content:space-around;
+padding:40px;
+background:#222;
+color:white;
+flex-wrap:wrap;
+}
+
+footer a{
+display:block;
+color:white;
+text-decoration:none;
+margin:5px 0;
+}
+
