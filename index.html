@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Luz Biviana Seguros</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h2>Luz Biviana Seguros</h2>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#catalogo">Seguros</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#registro">Registro</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Protegemos lo que más valoras</h1>
+
+        <p>
+            Seguros para personas, familias y empresas con asesoría personalizada.
+        </p>
+
+        <form id="formularioCorreo">
+
+            <input
+                type="email"
+                id="correoHero"
+                placeholder="Ingresa tu correo"
+                required
+            >
+
+            <button type="submit">
+                Solicitar información
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- CATÁLOGO -->
+
+<section id="catalogo" class="catalogo">
+
+    <h2>Nuestros Seguros</h2>
+
+    <div class="grid">
+
+        <article class="card">
+            <h3>Seguro de Vida</h3>
+            <p>
+                Protección financiera para quienes más quieres.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>Seguro Vehicular</h3>
+            <p>
+                Cobertura contra accidentes, robo y daños.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>Seguro de Hogar</h3>
+            <p>
+                Protege tu vivienda y tus bienes.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>Seguro de Salud</h3>
+            <p>
+                Acceso a servicios médicos con mayor tranquilidad.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>Seguro Empresarial</h3>
+            <p>
+                Protección para pequeñas y medianas empresas.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>Seguro de Viaje</h3>
+            <p>
+                Viaja con respaldo nacional e internacional.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- BENEFICIOS -->
+
+<section id="nosotros" class="beneficios">
+
+    <h2>¿Por qué elegir Luz Biviana Seguros?</h2>
+
+    <div class="beneficios-flex">
+
+        <div>
+            <h3>Asesoría Personalizada</h3>
+            <p>
+                Te ayudamos a elegir el seguro adecuado.
+            </p>
+        </div>
+
+        <div>
+            <h3>Respuesta Rápida</h3>
+            <p>
+                Atención eficiente durante todo el proceso.
+            </p>
+        </div>
+
+        <div>
+            <h3>Confianza</h3>
+            <p>
+                Trabajamos con compañías aseguradoras reconocidas.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REGISTRO + CRUD -->
+
+<section id="registro" class="registro">
+
+    <h2>Gestión de Usuarios</h2>
+
+    <div class="crud-container">
+
+        <!-- FORMULARIO -->
+
+        <div class="registro-panel">
+
+            <h3 id="tituloFormulario">
+                Registrar Usuario
+            </h3>
+
+            <form id="registroForm" class="registro-form">
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Nombre completo"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Correo electrónico"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    placeholder="Teléfono"
+                >
+
+                <div class="botones-formulario">
+
+                    <button
+                        type="submit"
+                        id="btnGuardar"
+                    >
+                        Registrar Usuario
+                    </button>
+
+                    <button
+                        type="button"
+                        id="btnCancelar"
+                        class="btn-cancelar"
+                        style="display:none;"
+                    >
+                        Cancelar
+                    </button>
+
+                </div>
+
+            </form>
+
+            <p id="mensaje" class="mensaje"></p>
+
+        </div>
+
+
+        <!-- TABLA -->
+
+        <div class="usuarios-panel">
+
+            <div class="tabla-header">
+
+                <h3>Usuarios Registrados</h3>
+
+                <span id="contadorUsuarios">
+                    0 usuarios
+                </span>
+
+            </div>
+
+            <div class="tabla-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Teléfono</th>
+                            <th>Acciones</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaUsuarios">
+
+                    </tbody>
+
+                </table>
+
+                <p
+                    id="sinUsuarios"
+                    class="sin-usuarios"
+                >
+                    No hay usuarios registrados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="contacto">
+
+    <div>
+
+        <h3>Luz Biviana Seguros</h3>
+
+        <p>
+            Protección y confianza para tu futuro.
+        </p>
+
+    </div>
+
+    <div>
+
+        <h3>Enlaces</h3>
+
+        <a href="#">Inicio</a>
+        <a href="#catalogo">Seguros</a>
+        <a href="#contacto">Contacto</a>
+
+    </div>
+
+    <div>
+
+        <h3>Redes Sociales</h3>
+
+        <p>Facebook</p>
+        <p>Instagram</p>
+        <p>WhatsApp</p>
+
+    </div>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+   
+
+    // ==========================================
+    // CONFIGURACIÓN
+    // ==========================================
+
+    const API_URL = "/api/usuarios";
+
+
+    // ==========================================
+    // ELEMENTOS DEL DOM
+    // ==========================================
+
+    const registroForm =
+        document.getElementById("registroForm");
+
+    const nombreInput =
+        document.getElementById("nombre");
+
+    const emailInput =
+        document.getElementById("email");
+
+    const telefonoInput =
+        document.getElementById("telefono");
+
+    const tablaUsuarios =
+        document.getElementById("tablaUsuarios");
+
+    const sinUsuarios =
+        document.getElementById("sinUsuarios");
+
+    const contadorUsuarios =
+        document.getElementById("contadorUsuarios");
+
+    const tituloFormulario =
+        document.getElementById("tituloFormulario");
+
+    const btnGuardar =
+        document.getElementById("btnGuardar");
+
+    const btnCancelar =
+        document.getElementById("btnCancelar");
+
+    const mensaje =
+        document.getElementById("mensaje");
+
+
+    // ==========================================
+    // ESTADO
+    // ==========================================
+
+    let usuarioEditando = null;
+
+
+    // ==========================================
+    // OBTENER USUARIOS
+    // ==========================================
+
+    async function cargarUsuarios() {
+
+        try {
+
+            const respuesta =
+                await fetch(API_URL);
+
+
+            if (!respuesta.ok) {
+
+                throw new Error(
+                    "No se pudieron obtener los usuarios"
+                );
+
+            }
+
+
+            const usuarios =
+                await respuesta.json();
+
+
+            mostrarUsuarios(usuarios);
+
+        } catch (error) {
+
+            console.error(error);
+
+            mostrarMensaje(
+                "No se pudo conectar con el servidor.",
+                "error"
+            );
+
+        }
+
+    }
+
+
+    // ==========================================
+    // MOSTRAR USUARIOS
+    // ==========================================
+
+    function mostrarUsuarios(usuarios) {
+
+        tablaUsuarios.innerHTML = "";
+
+
+        if (usuarios.length === 0) {
+
+            sinUsuarios.style.display = "block";
+
+        } else {
+
+            sinUsuarios.style.display = "none";
+
+        }
+
+
+        usuarios.forEach(function(usuario) {
+
+            const fila =
+                document.createElement("tr");
+
+
+            fila.innerHTML = `
+
+                <td>${usuario.id}</td>
+
+                <td>${usuario.nombre}</td>
+
+                <td>${usuario.email}</td>
+
+                <td>
+                    ${usuario.telefono || "No registrado"}
+                </td>
+
+                <td>
+
+                    <div class="acciones">
+
+                        <button
+                            class="btn-editar"
+                            onclick="editarUsuario(${usuario.id})"
+                        >
+                            Editar
+                        </button>
+
+                        <button
+                            class="btn-eliminar"
+                            onclick="eliminarUsuario(${usuario.id})"
+                        >
+                            Eliminar
+                        </button>
+
+                    </div>
+
+                </td>
+
+            `;
+
+
+            tablaUsuarios.appendChild(fila);
+
+        });
+
+
+        actualizarContador(usuarios.length);
+
+    }
+
+
+    // ==========================================
+    // CONTADOR
+    // ==========================================
+
+    function actualizarContador(cantidad) {
+
+        if (cantidad === 1) {
+
+            contadorUsuarios.textContent =
+                "1 usuario";
+
+        } else {
+
+            contadorUsuarios.textContent =
+                `${cantidad} usuarios`;
+
+        }
+
+    }
+
+
+    // ==========================================
+    // CREAR / ACTUALIZAR
+    // ==========================================
+
+    registroForm.addEventListener(
+        "submit",
+        async function(event) {
+
+            event.preventDefault();
+
+
+            const nombre =
+                nombreInput.value.trim();
+
+            const email =
+                emailInput.value.trim();
+
+            const telefono =
+                telefonoInput.value.trim();
+
+
+            if (!nombre || !email) {
+
+                mostrarMensaje(
+                    "Nombre y correo son obligatorios.",
+                    "error"
+                );
+
+                return;
+
+            }
+
+
+            const datos = {
+
+                nombre: nombre,
+
+                email: email,
+
+                telefono: telefono
+
+            };
+
+
+            try {
+
+                let respuesta;
+
+
+                // ==================================
+                // EDITAR
+                // ==================================
+
+                if (usuarioEditando !== null) {
+
+                    respuesta = await fetch(
+                        `${API_URL}/${usuarioEditando}`,
+                        {
+                            method: "PUT",
+
+                            headers: {
+                                "Content-Type":
+                                    "application/json"
+                            },
+
+                            body:
+                                JSON.stringify(datos)
+                        }
+                    );
+
+                }
+
+
+                // ==================================
+                // CREAR
+                // ==================================
+
+                else {
+
+                    respuesta = await fetch(
+                        API_URL,
+                        {
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type":
+                                    "application/json"
+                            },
+
+                            body:
+                                JSON.stringify(datos)
+                        }
+                    );
+
+                }
+
+
+                const resultado =
+                    await respuesta.json();
+
+
+                if (!respuesta.ok) {
+
+                    throw new Error(
+                        resultado.error ||
+                        "Error en la operación"
+                    );
+
+                }
+
+
+                if (usuarioEditando !== null) {
+
+                    mostrarMensaje(
+                        "Usuario actualizado correctamente.",
+                        "exito"
+                    );
+
+                } else {
+
+                    mostrarMensaje(
+                        "Usuario registrado correctamente.",
+                        "exito"
+                    );
+
+                }
+
+
+                registroForm.reset();
+
+                finalizarEdicion();
+
+                cargarUsuarios();
+
+
+            } catch (error) {
+
+                console.error(error);
+
+                mostrarMensaje(
+                    error.message,
+                    "error"
+                );
+
+            }
+
+        }
+    );
+
+
+    // ==========================================
+    // EDITAR USUARIO
+    // ==========================================
+
+    async function editarUsuario(id) {
+        
+
+    try {
+
+        const respuestaTodos =
+            await fetch(API_URL);
+
+        const usuarios =
+            await respuestaTodos.json();
+
+        const usuario =
+            usuarios.find(
+                u => u.id === id
+            );
+
+        // ...
+
+            if (!usuario) {
+
+                mostrarMensaje(
+                    "Usuario no encontrado.",
+                    "error"
+                );
+
+                return;
+
+            }
+
+
+            nombreInput.value =
+                usuario.nombre;
+
+            emailInput.value =
+                usuario.email;
+
+            telefonoInput.value =
+                usuario.telefono || "";
+
+
+            usuarioEditando = id;
+
+
+            tituloFormulario.textContent =
+                "Editar Usuario";
+
+
+            btnGuardar.textContent =
+                "Guardar Cambios";
+
+
+            btnCancelar.style.display =
+                "block";
+
+
+            document
+                .getElementById("registro")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+
+        } catch (error) {
+
+            console.error(error);
+
+            mostrarMensaje(
+                "No se pudo cargar el usuario.",
+                "error"
+            );
+
+        }
+
+    }
+
+
+    // ==========================================
+    // ELIMINAR USUARIO
+    // ==========================================
+
+    async function eliminarUsuario(id) {
+
+        const confirmar =
+            confirm(
+                "¿Deseas eliminar este usuario?"
+            );
+
+
+        if (!confirmar) {
+            return;
+        }
+
+
+        try {
+
+            const respuesta =
+                await fetch(
+                    `${API_URL}/${id}`,
+                    {
+                        method: "DELETE"
+                    }
+                );
+
+
+            const resultado =
+                await respuesta.json();
+
+
+            if (!respuesta.ok) {
+
+                throw new Error(
+                    resultado.error ||
+                    "No se pudo eliminar el usuario"
+                );
+
+            }
+
+
+            mostrarMensaje(
+                "Usuario eliminado correctamente.",
+                "exito"
+            );
+
+
+            cargarUsuarios();
+
+
+        } catch (error) {
+
+            console.error(error);
+
+            mostrarMensaje(
+                error.message,
+                "error"
+            );
+
+        }
+
+    }
+
+
+    // ==========================================
+    // CANCELAR EDICIÓN
+    // ==========================================
+
+    btnCancelar.addEventListener(
+        "click",
+        function() {
+
+            registroForm.reset();
+
+            finalizarEdicion();
+
+        }
+    );
+
+
+    function finalizarEdicion() {
+
+        usuarioEditando = null;
+
+
+        tituloFormulario.textContent =
+            "Registrar Usuario";
+
+
+        btnGuardar.textContent =
+            "Registrar Usuario";
+
+
+        btnCancelar.style.display =
+            "none";
+
+    }
+
+
+    // ==========================================
+    // MENSAJES
+    // ==========================================
+
+    function mostrarMensaje(texto, tipo) {
+
+        mensaje.textContent = texto;
+
+        mensaje.className =
+            "mensaje " + tipo;
+
+
+        setTimeout(function() {
+
+            mensaje.textContent = "";
+
+            mensaje.className = "mensaje";
+
+        }, 3000);
+
+    }
+
+
+    // ==========================================
+    // FORMULARIO DEL HERO
+    // ==========================================
+
+    const formularioCorreo =
+        document.getElementById(
+            "formularioCorreo"
+        );
+
+
+    formularioCorreo.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const correo =
+                document.getElementById(
+                    "correoHero"
+                ).value;
+
+
+            emailInput.value = correo;
+
+
+            document
+                .getElementById("registro")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+
+            mostrarMensaje(
+                "Correo agregado. Completa tus datos para registrarte.",
+                "exito"
+            );
+
+        }
+    );
+
+
+    // ==========================================
+    // INICIAR
+    // ==========================================
+
+    cargarUsuarios();
+
+</script>
+
+</body>
+
+</html>
